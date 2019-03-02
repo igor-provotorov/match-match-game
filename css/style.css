@@ -1,0 +1,158 @@
+/*прижатие футера*/
+html,
+body {
+  height: 100%;
+}
+.wrap {
+  min-height: 100%;
+}
+.main {
+  padding-bottom: 50px;
+}
+.footer {
+  margin-top: -50px;
+  height: 50px;
+}
+/*основные стили*/
+body{
+    position: relative;
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+}
+.header, .footer{
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    align-items: center;
+}
+.main_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.main_game-instruction_description{
+    padding: 5px;
+    font-size: 20px;
+}
+.header_title, .footer_title{
+    text-transform: uppercase;
+    color: white;
+}
+.main_game-instruction_title{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}
+.wrrap_main_btn_start-game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_btn_start-game, .btn-play-again{
+    width: 30%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #36D2A5;
+    color: white;
+    border-radius: 5px;
+}
+.main_btn_start-game:hover{
+    background-color: #68DEBB;
+}
+/*Cards*/
+/* весь контейнер поддерживает перспективу */
+.flip-container {
+    perspective: 1000;
+    opacity: 1;
+    position: relative;
+    height: 100%;
+}
+ /* переверните сторону при проведении мышью */
+
+ /*.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+ }*/
+
+ .flipper-rotate{
+     transform: rotateY(180deg);
+     height: 100%;
+ }
+
+.gameTable{
+    width: 90%;
+}
+.flip-container, .front, .back {
+    width: 100%;
+
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+    backface-visibility: hidden;
+    /*height: 100%;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+    z-index: 2;
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+    transform: rotateY(180deg);
+}
+
+
+.flip-container-disappear{
+    opacity: 0.1;
+    transition: opacity 0.1s linear 0.1s;
+}
+/*Game*/
+.main_clock{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 25px;
+}
+.win_message{
+    font-size: 30px;
+    padding: 20px;
+    font-weight: 600;
+}
+.game_results{
+    font-size: 20px;
+    padding: 20px;
+    font-weight: 600;
+}
+.init-skirt, .init-difficulty{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.main_game_skirts_list, .main_game_size_list{
+    margin-bottom: 10px;
+}
+.table-wraper{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
